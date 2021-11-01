@@ -1,14 +1,15 @@
 #Start with welcome message
+Print("Welcome to our luxury condo questionaire!")
 
 #ask user if they have pets
 pets= input('Do you have pets? ')
-
 #if yes, dont continue
 #if no, move onto price breakdown
 if pets == 'yes':
-    print('You do not qualify for the condos.')
+    print('You do not qualify for the condos:(')
 else:
-    print('You qualify for one of our condos')
+    print('You qualify for one of our condos!!!')
+    
     
 # This part will show prices for each floor
 def main():
@@ -26,6 +27,7 @@ def main():
     input('Press Enter to see monthly cost for floor4.')
     # Display floor 4.
     step4()
+
 
 # The startup_message function displays the
 # program's initial message on the screen.
@@ -54,17 +56,26 @@ def step4():
 main()
 
 
-
 try_again= 'yes' 
 while try_again=='yes' :
     income =int(input("Whats your average monthly income? "))
     roommate =int(input("Whats your roomates average monthly income? "))
     roommate2 =int(input("Whats your second roomates average monthly income? "))
-# and bonus. Assign the result to pay.
+    break
+# and incomes. Assign the result to total.
 total = income + roommate +roommate2
-
 # Calculate the total by adding the three incomes
-print("Your total monthly income is ", total + income)
+print("Your total monthly income is ", total)
 
-try_again = input("Would you like to try again with a different roommate?")
+#Heres the for loop FIX THIS PART 
+for total in range(4000, 4999):
+    print('You qualify for a first floor condo')
+for total in range(5000, 5999):
+    print('You qualify for a second floor condo')
+for total in range(6000, 6999):
+    print('You qualify for a third floor condo')
+for total in range(7000, 9999999999):
+    print('You qualify for a fourth floor condo')    
 
+
+try_again = input("Would you like to try again with a different roommate to see if you qualitfy for a better floor?")
