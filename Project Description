@@ -54,33 +54,24 @@ else:
     # Call the main function to begin the program.
     main()
 
-
+    #nested for loop
     try_again= 'yes' 
     while try_again=='yes' :
+        
         income =float(input("Whats your average monthly income? "))
         roommate =float(input("Whats your roomates average monthly income? "))
         roommate2 =float(input("Whats your second roomates average monthly income? "))
         break
-    # and bonus. Assign the result to pay.
-    total = income + roommate +roommate2
+        # and bonus. Assign the result to pay.
+        total = income + roommate +roommate2
 
-    # Calculate the total by adding the three incomes
-    print("Your total monthly income is ", total)
+        # Calculate the total by adding the three incomes
+        print("Your total monthly income is ", total)
 
-    #declare things for nested for loop
-    first_floor = [4000,4999]
-    second_floor = [5000,5999]
-    third_floor = [6000,6999]
-    fourth_floor = [7000,9999999]
-
-    for total in first_floor:
-        print('You qualify for a first floor condo')
-        for total in second_floor:
-            print('You qualify for a second floor condo')
-            for total in third_floor:
-                print('You qualify for a third floor condo')
-                for total in fourth_floor:
-                    print('You qualify for a fourth floor condo')    
-
-
+        #declare things for nested for loop
+        condos = [4000,100000]
+        for total in condos:
+            print('You qualify for any of our condos')
+            
     try_again = input("Would you like to try again with a different roommate to see if you qualitfy for a better floor?")
+
