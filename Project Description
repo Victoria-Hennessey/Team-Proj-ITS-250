@@ -1,81 +1,86 @@
 #Start with welcome message
-Print("Welcome to our luxury condo questionaire!")
-
+print('Welcome to our luxury condo questionaire!')
 #ask user if they have pets
 pets= input('Do you have pets? ')
+
 #if yes, dont continue
 #if no, move onto price breakdown
 if pets == 'yes':
     print('You do not qualify for the condos:(')
 else:
     print('You qualify for one of our condos!!!')
-    
-    
-# This part will show prices for each floor
-def main():
-    # Display the start-up message.
-    startup_message()
-    input('Press Enter to see monthly cost for floor 1.')
-    # Display floor 1.
-    step1()
-    input('Press Enter to see monthly cost for floor 2.')
-    # Display floor 2.
-    step2()
-    input('Press Enter to see monthly cost for floor 3.')
-    # Display floor 3.
-    step3()
-    input('Press Enter to see monthly cost for floor4.')
-    # Display floor 4.
-    step4()
+        
+
+    # This part will show prices for each floor
+    def main():
+        # Display the start-up message.
+        startup_message()
+        input('Press Enter to see monthly cost for floor 1.')
+        # Display floor 1.
+        step1()
+        input('Press Enter to see monthly cost for floor 2.')
+        # Display floor 2.
+        step2()
+        input('Press Enter to see monthly cost for floor 3.')
+        # Display floor 3.
+        step3()
+        input('Press Enter to see monthly cost for floor4.')
+        # Display floor 4.
+        step4()
+
+    # The startup_message function displays the
+    # program's initial message on the screen.
+    def startup_message():
+        print('Here we will let you know the average')
+        print('monthly cost for a condo on each floor.')
+
+    # The step1 function displays price for the first floor
+    def step1():
+        print('First floor: $4,000 a month')
+
+    # The step2 function displays price for second floor
+    def step2():
+        print('Second floor: $5,000 a month')
 
 
-# The startup_message function displays the
-# program's initial message on the screen.
-def startup_message():
-    print('Here we will let you know the average')
-    print('monthly cost for a condo on each floor')
+    # The step3 function displays price for third floor
+    def step3():
+        print('Third floor: $6,000 a month')
 
-# The step1 function displays price for the first floor
-def step1():
-    print('First floor: $4,000 a month')
+    # The step4 function displays price for fourth floor
+    def step4():
+        print('Fourth floor: $7,000 a month')
 
-# The step2 function displays price for second floor
-def step2():
-    print('Second floor: $5,000 a month')
+    # Call the main function to begin the program.
+    main()
 
 
-# The step3 function displays price for third floor
-def step3():
-    print('Third floor: $6,000 a month')
+    try_again= 'yes' 
+    while try_again=='yes' :
+        income =float(input("Whats your average monthly income? "))
+        roommate =float(input("Whats your roomates average monthly income? "))
+        roommate2 =float(input("Whats your second roomates average monthly income? "))
+        break
+    # and bonus. Assign the result to pay.
+    total = income + roommate +roommate2
 
-# The step4 function displays price for fourth floor
-def step4():
-    print('Fourth floor: $7,000 a month')
+    # Calculate the total by adding the three incomes
+    print("Your total monthly income is ", total)
 
-# Call the main function to begin the program.
-main()
+    #declare things for nested for loop
+    first_floor = [4000,4999]
+    second_floor = [5000,5999]
+    third_floor = [6000,6999]
+    fourth_floor = [7000,9999999]
 
-
-try_again= 'yes' 
-while try_again=='yes' :
-    income =int(input("Whats your average monthly income? "))
-    roommate =int(input("Whats your roomates average monthly income? "))
-    roommate2 =int(input("Whats your second roomates average monthly income? "))
-    break
-# and incomes. Assign the result to total.
-total = income + roommate +roommate2
-# Calculate the total by adding the three incomes
-print("Your total monthly income is ", total)
-
-#Heres the for loop FIX THIS PART 
-for total in range(4000, 4999):
-    print('You qualify for a first floor condo')
-for total in range(5000, 5999):
-    print('You qualify for a second floor condo')
-for total in range(6000, 6999):
-    print('You qualify for a third floor condo')
-for total in range(7000, 9999999999):
-    print('You qualify for a fourth floor condo')    
+    for total in first_floor:
+        print('You qualify for a first floor condo')
+        for total in second_floor:
+            print('You qualify for a second floor condo')
+            for total in third_floor:
+                print('You qualify for a third floor condo')
+                for total in fourth_floor:
+                    print('You qualify for a fourth floor condo')    
 
 
-try_again = input("Would you like to try again with a different roommate to see if you qualitfy for a better floor?")
+    try_again = input("Would you like to try again with a different roommate to see if you qualitfy for a better floor?")
