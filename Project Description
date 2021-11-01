@@ -1,5 +1,6 @@
 #Start with welcome message
 print('Welcome to our luxury condo questionaire!')
+
 #ask user if they have pets
 pets= input('Do you have pets? ')
 
@@ -10,8 +11,7 @@ if pets == 'yes':
 else:
     print('You qualify for one of our condos!!!')
         
-     # The startup_message function displays the
-    # program's initial message on the screen.
+    # The startup_message function displays the program's initial message on the screen.
     def startup_message():
         print('Here we will let you know the average')
         print('monthly cost for a condo on each floor.')
@@ -36,7 +36,7 @@ else:
     # Call the main function to begin the program.
     main()
 
-    #nested for loop
+    #heres the while loop
     try_again= 'yes' 
     while try_again=='yes' :
         
@@ -44,15 +44,16 @@ else:
         roommate =float(input("Whats your roomates average monthly income? "))
         roommate2 =float(input("Whats your second roomates average monthly income? "))
         break
-        # and bonus. Assign the result to pay.
-        total = income + roommate +roommate2
 
-        # Calculate the total by adding the three incomes
-        print("Your total monthly income is ", total)
+# and bonus. Assign the result to pay.
+    total = income + roommate +roommate2
 
-            #declare things for nested for loop
-        for total in range(4000,100000):
-            print('You qualify for any of our condos')
-            break
+# Calculate the total by adding the three incomes
+    print("Your total monthly income is ", total)
+
+#declare things for nested for loop
+    for total in range(4000,100000):
+        print('You qualify for any of our condos')
+        break
         
     try_again = input("Would you like to try again with a different roommate to see if you qualitfy? ")
