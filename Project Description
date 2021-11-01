@@ -10,25 +10,7 @@ if pets == 'yes':
 else:
     print('You qualify for one of our condos!!!')
         
-
-    # This part will show prices for each floor
-    def main():
-        # Display the start-up message.
-        startup_message()
-        input('Press Enter to see monthly cost for floor 1.')
-        # Display floor 1.
-        step1()
-        input('Press Enter to see monthly cost for floor 2.')
-        # Display floor 2.
-        step2()
-        input('Press Enter to see monthly cost for floor 3.')
-        # Display floor 3.
-        step3()
-        input('Press Enter to see monthly cost for floor4.')
-        # Display floor 4.
-        step4()
-
-    # The startup_message function displays the
+     # The startup_message function displays the
     # program's initial message on the screen.
     def startup_message():
         print('Here we will let you know the average')
@@ -68,8 +50,9 @@ else:
         # Calculate the total by adding the three incomes
         print("Your total monthly income is ", total)
 
-        #declare things for nested for loop
-        for total in range (4000,100000):
+            #declare things for nested for loop
+        for total in range(4000,100000):
             print('You qualify for any of our condos')
-           
-    try_again = input("Would you like to try again with a different roommate to see if you qualitfy for a better floor?")
+            break
+        
+    try_again = input("Would you like to try again with a different roommate to see if you qualitfy? ")
