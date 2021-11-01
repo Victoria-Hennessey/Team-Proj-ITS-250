@@ -69,9 +69,7 @@ else:
         print("Your total monthly income is ", total)
 
         #declare things for nested for loop
-        condos = [4000,100000]
-        for total in condos:
+        for total in range (4000,100000):
             print('You qualify for any of our condos')
-            
+           
     try_again = input("Would you like to try again with a different roommate to see if you qualitfy for a better floor?")
-
