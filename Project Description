@@ -67,7 +67,7 @@ else:
     # Calculate the total by adding the three incomes
     print("Your total monthly income is ", total)
 
-     #Heres the for loop FIX THIS PART
+     #Heres the for loop with nested if statment
     for total in range(4000, 99999999):
         if total > 40000:
             print('You qualify for any of our condos')
