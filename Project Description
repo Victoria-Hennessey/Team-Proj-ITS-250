@@ -69,7 +69,7 @@ else:
 
      #Heres the for loop with nested if statment
     for total in range(4000, 99999999):
-        if total > 40000:
+        if total >= 4000:
             print('You qualify for any of our condos')
         else:
             print("you do not qualify for any of our condos :(")
