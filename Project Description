@@ -67,9 +67,12 @@ else:
     # Calculate the total by adding the three incomes
     print("Your total monthly income is ", total)
 
-        #Heres the for loop FIX THIS PART
+     #Heres the for loop FIX THIS PART
     for total in range(4000, 99999999):
-        print('You qualify for any of our condos')
+        if total > 40000:
+            print('You qualify for any of our condos')
+        else:
+            print("you do not qualify for any of our condos :(")
         break
  
     try_again = input("Would you like to try again with a different roommate to see if you qualitfy? ")
